@@ -1,0 +1,40 @@
+// ----------- Design Tokens ------------ //
+
+:root {
+  // ----------- Color Tokens ------------- //
+  --bb-color-white: #FFFFFF;
+  --bb-color-black: #000000;
+
+  --bb-color-light-green: #47A138;
+  --bb-color-green: #004D61;
+  --bb-color-red: #FF5031;
+  --bb-color-dark-grey: #DEE9EA;
+  --bb-color-light-grey: #FBF8F8;
+  --bb-color-gradient-green: linear-gradient(#004D61, 100%),
+                             linear-gradient(#FFFFFF, 100%);
+
+
+  // ----------- Font --------------------- //
+  --bb-font-family: 'Inter, sans-serif';
+  --bb-font-size-small: 13px;
+  --bb-font-size-medium: 16px;
+  --bb-font-size-large: 20px;
+  --bb-font-size: 25px;
+
+  // --------- Font-Weight ---------------- //
+  --bb-font-weight-light: 400;
+  --bb-font-weight-normal: 500;
+  --bb-font-weight-bold: 600;
+  --bb-font-weight-superbold: 700;
+
+  // ----------- Spacing ------------------ //
+  --bb-spacing-small: 8px;
+  --bb-spacing-large: 24px;
+
+  // ---------- Border-Radius ------------- //
+  --bb-border-radius-small: 8px;
+  --bb-border-radius-pill: 9999px;
+  --border-radius-circle: 50%;
+
+}
+
