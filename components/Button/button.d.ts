@@ -12,11 +12,16 @@ type Size =
   'medium' |
   'large';
 
+type ButtonTypeAttribute = 
+  'reset' |
+  'button' |
+  'submit';
+
 export interface ButtonProps {
   children: ReactNode,
   variant?: Variant,
   size?: Size,
-  type?: ButtonHTMLAttributes<HTMLButtonElement>,
+  type?: ButtonTypeAttribute,
   disabled?: boolean,
   handleOnClick?: (
     data: { 

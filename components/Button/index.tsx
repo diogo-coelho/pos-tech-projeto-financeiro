@@ -5,7 +5,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   const className = (): string => {
     return [
       `button`, 
-      props.variant ?? ``,
+      props.variant ?? `primary`,
       props.size ?? ``
     ].toString().replaceAll(",", " ");
   }
