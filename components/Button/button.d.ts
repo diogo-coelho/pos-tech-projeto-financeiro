@@ -16,4 +16,11 @@ export interface ButtonProps {
   children: ReactNode,
   variant?: Variant,
   size?: Size,
+  type?: ButtonHTMLAttributes<HTMLButtonElement>,
+  disabled?: boolean,
+  handleOnClick?: (
+    data: { 
+      args?: T | T[], 
+      event: MouseEvent<HTMLButtonElement, MouseEvent> 
+  }) => T,
 }

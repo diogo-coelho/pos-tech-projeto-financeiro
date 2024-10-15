@@ -1,7 +1,6 @@
 .button {
   height: 48px;
   font-weight: var(--bb-font-weight-bold);
-  line-height: 19.36px;
   padding: var(--bb-spacing-small) var(--bb-spacing-large);
   border-radius: var(--bb-border-radius-small);
   background-color: var(--bb-color-green);
@@ -9,26 +8,32 @@
   border: 2px solid var(--bb-color-green);
   cursor: pointer;
 
-  &.primary {
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.primary,
+  &.primary:disabled {
     background-color: var(--bb-color-green);
     color: var(--bb-color-white);
     border: 2px solid var(--bb-color-green);
     transition: background-color .2s ease-in, border .2s ease-in;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: var(--bb-color-black);
       border: 2px solid var(--bb-color-black);
       transition: background-color .2s ease-out, border .2s ease-out;
     }
   }
 
-  &.secondary {
+  &.secondary,
+  &.secondary:disabled {
     background-color: var(--bb-color-dark-grey);
     color: var(--bb-color-green);
     border: 2px solid var(--bb-color-dark-grey);
     transition: background-color .2s ease-in, border .2s ease-in, color .2s ease-out;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: var(--bb-color-green);
       border: 2px solid var(--bb-color-green);
       color: var(--bb-color-white);
@@ -36,29 +41,41 @@
     }
   }
 
-  &.success {
+  &.success,
+  &.success:disabled {
     background-color: var(--bb-color-light-green);
     color: var(--bb-color-white);
     border: 2px solid var(--bb-color-light-green);
     transition: background-color .2s ease-in, border .2s ease-in;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: var(--bb-color-black);
       border: 2px solid var(--bb-color-black);
       transition: background-color .2s ease-out, border .2s ease-out;
     }
   }
 
-  &.danger {
+  &.danger,
+  &.danger:disabled {
     background-color: var(--bb-color-red);
     color: var(--bb-color-white);
     border: 2px solid var(--bb-color-red);
     transition: background-color .2s ease-in, border .2s ease-in;
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: var(--bb-color-black);
       border: 2px solid var(--bb-color-black);
       transition: background-color .2s ease-out, border .2s ease-out;
     }
+  }
+
+  &.small {
+    width: 100%;
+    max-width: 144px;
+  }
+
+  &.large {
+    width: 100%;
+    max-width: 250px;
   }
 }
