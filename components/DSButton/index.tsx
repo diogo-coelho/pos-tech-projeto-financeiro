@@ -1,13 +1,13 @@
-import { ButtonProps } from './button.d';
-import './Button.scss';
+import { ButtonProps } from './DSbutton';
+import './DSButton.scss';
 
-const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
+const DSButton: React.FC<ButtonProps> = (props: ButtonProps) => {
   const className = (): string => {
     return [
       `button`, 
       props.variant ?? `primary`,
       props.size ?? ``
-    ].toString().replaceAll(",", " ");
+    ].toString().replaceAll(",", " ").trim();
   }
 
   return (
@@ -16,10 +16,11 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
       type={props.type || 'button'}
       disabled={props.disabled || false}
       onClick={ (event) => props.handleOnClick?.({ event }) }
+      {...props}
     >
       { props.children }
     </button>
   )
 }
 
-export default Button;
+export default DSButton;

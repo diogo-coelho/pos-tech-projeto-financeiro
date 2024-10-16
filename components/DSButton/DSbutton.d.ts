@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode, ButtonHTMLAttributes } from "react"
 
 type Variant = 
   'primary' |
@@ -17,7 +17,7 @@ type ButtonTypeAttribute =
   'button' |
   'submit';
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode,
   variant?: Variant,
   size?: Size,

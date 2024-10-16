@@ -1,5 +1,7 @@
 "use client"
-import Button from '../components/Button';
+import DSInput from '@/components/DSInput';
+import { IconType } from '@/components/DSInput/DSinput.d';
+import DSButton from '../components/DSButton';
 
 export default function Home() {
   const funcaoExemplo = (parametro: string[]) => {
@@ -18,12 +20,13 @@ export default function Home() {
   return (
     <>
       <div>Home</div>
-      <Button
-        type="submit" 
-        variant="secondary" 
-        size="small"
-        handleOnClick={() => funcaoExemplo(args)}
-      >Concluir transação</Button>
+
+      <DSInput
+        type="number" 
+        input-size='small'
+        placeholder={"Selecione o tipo de transação"} 
+        suffix={IconType.ARROW_DROP_DOWN}
+      />
     </>
   );
 }

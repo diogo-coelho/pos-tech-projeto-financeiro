@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import '../styles/app.scss';
 
-import Button from '../components/Button';
-import '../components/Button/Button.scss';
+import DSButton from '../components/DSButton';
+import '../components/DSButton/DSButton.scss';
 
-const meta: Meta<typeof Button> = {
-  component: Button,
+const meta: Meta<typeof DSButton> = {
+  component: DSButton,
   tags: ['autodocs'],
   args: {
     handleOnClick: fn()
@@ -14,12 +14,12 @@ const meta: Meta<typeof Button> = {
 }
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof DSButton>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     variant: 'primary',
-    children: 'Primary',
+    children: 'Default',
   }
 }
 
