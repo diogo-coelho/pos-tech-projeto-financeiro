@@ -1,7 +1,7 @@
 "use client"
 import DSInput from '@/components/DSInput';
-import { IconType } from '@/components/DSInput/DSinput.d';
 import DSButton from '../components/DSButton';
+import DSSelect from '@/components/DSSelect';
 
 export default function Home() {
   const funcaoExemplo = (parametro: string[]) => {
@@ -21,12 +21,15 @@ export default function Home() {
     <>
       <div>Home</div>
 
-      <DSInput
-        type="number" 
-        input-size='small'
+      <DSSelect
         placeholder={"Selecione o tipo de transação"} 
-        suffix={IconType.ARROW_DROP_DOWN}
-      />
+        input-size='small'
+        options={[
+          "Câmbio de Moeda",
+          "DOC/TED",
+          "Empréstimo e Financiamento"
+        ]}
+      ></DSSelect>
     </>
   );
 }

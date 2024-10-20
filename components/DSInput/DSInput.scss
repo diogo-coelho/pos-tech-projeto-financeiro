@@ -13,6 +13,8 @@
     font-size: var(--bb-font-size-medium);
     color: var(--bb-color-green);
     font-weight: var(--bb-font-weight-light);
+    background-color: var(--bb-color-white);
+    z-index: 1;
   
     &::placeholder {
       font-size: var(--bb-font-size-medium);
@@ -59,6 +61,14 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    right: var(--bb-spacing-small);    
+    right: var(--bb-spacing-small);
+    z-index: 2; 
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in;   
+  }
+
+  .input + .suffix.active {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-out; 
   }
 }

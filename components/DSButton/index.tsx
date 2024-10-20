@@ -1,4 +1,4 @@
-import { ButtonProps } from './DSbutton';
+import { ButtonProps } from './ds_button';
 import './DSButton.scss';
 
 const DSButton: React.FC<ButtonProps> = (props: ButtonProps) => {

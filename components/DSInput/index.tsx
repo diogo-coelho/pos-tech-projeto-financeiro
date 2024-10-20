@@ -1,4 +1,4 @@
-import { InputProps } from './DSinput.d';
+import { InputProps } from './ds_input';
 import './DSInput.scss';
 
 const Input = (props: InputProps) => {
@@ -6,7 +6,7 @@ const Input = (props: InputProps) => {
     return [
       `input`,
       (props.inputSize || props['input-size']) ?? ``,
-      props.align ? `align-${props.align}` : ``
+      props.align ? `align-${props.align}` : ``,
     ].toString().replaceAll(",", " ").trim();
   }
 
@@ -17,13 +17,14 @@ const Input = (props: InputProps) => {
         type={ props.type || `text` } 
         placeholder={ props.placeholder }
         disabled={ props.disabled || false }
+        value={props.currentValue}
         {...props}
       />
-        { props.suffix && 
-          <div className="suffix">
-            <img src={`/images/${ props.suffix }`} alt="Icon" />
-          </div>
-        }
+      { props.suffix && 
+        <div className={`suffix${props.active ? ` active` : ''}`}>
+          <img src={`/images/${ props.suffix }`} alt="Icon" />
+        </div>
+      }
     </div>
   )
 }

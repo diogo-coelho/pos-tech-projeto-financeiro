@@ -1,4 +1,5 @@
 import { InputHTMLAttributes, ReactNode } from "react";
+import { IconType } from './ds_icon';
 
 type InputAttributeType =
   "button" |
@@ -31,12 +32,11 @@ type InputSize =
 type AlignText = 
   'center' |
   'left' |
-  'right'
+  'right';
 
 export enum IconType {
   ARROW_DROP_DOWN = '/arrow_drop_down.png'
-} 
-
+}
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   type?: InputAttributeType,
@@ -45,5 +45,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string,
   inputSize?: InputSize,
   "input-size"?: InputSize,
-  suffix?: IconType
+  suffix?: IconType,
+  active?: boolean,
+  currentValue?: string,
 }
