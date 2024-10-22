@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import '../styles/app.scss';
 
-import DSInput from '../components/DSInput';
-import '../components/DSInput/DSInput.scss';
+import DSInput from '../components/design-system/DSInput';
+import '../components/design-system/DSInput/DSInput.scss';
 
 const meta: Meta<typeof DSInput> = {
   component: DSInput,

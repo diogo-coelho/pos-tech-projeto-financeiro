@@ -6,10 +6,12 @@
   --bb-color-black: #000000;
 
   --bb-color-light-green: #47A138;
+  --bb-color-light-green-alpha: #47A13880;
   --bb-color-green: #004D61;
   --bb-color-red: #FF5031;
   --bb-color-dark-grey: #DEE9EA;
   --bb-color-light-grey: #FBF8F8;
+  --bb-color-grey: #8B8B8B;
   --bb-color-gradient-green: linear-gradient(#004D61, 100%),
                              linear-gradient(#FFFFFF, 100%);
 
@@ -29,6 +31,7 @@
 
   // ----------- Spacing ------------------ //
   --bb-spacing-small: 8px;
+  --bb-spacing-medium: 16px;
   --bb-spacing-large: 24px;
 
   // ---------- Border-Radius ------------- //

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../styles/app.scss';
 
-import DSSelect from '../components/DSSelect';
-import '../components/DSSelect/DSSelect.scss';
+import DSSelect from '../components/design-system/DSSelect';
+import '../components/design-system/DSSelect/DSSelect.scss';
 
 const meta: Meta<typeof DSSelect> = {
   component: DSSelect,

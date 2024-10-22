@@ -49,4 +49,9 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   active?: string,
   currentValue?: string,
   "current-value"?: string,
+  handleOnChange?: (
+    data: { 
+      args?: T | T[], 
+      event: MouseEvent<HTMLButtonElement, MouseEvent> 
+  }) => T,
 }

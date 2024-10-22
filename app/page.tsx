@@ -1,7 +1,8 @@
 "use client"
-import DSInput from '@/components/DSInput';
-import DSButton from '../components/DSButton';
-import DSSelect from '@/components/DSSelect';
+import DSInput from '@/components/design-system/DSInput';
+import DSButton from '../components/design-system/DSButton';
+import DSSelect from '@/components/design-system/DSSelect';
+import DSList from '@/components/design-system/DSList';
 
 export default function Home() {
   const funcaoExemplo = (parametro: string[]) => {
@@ -20,6 +21,14 @@ export default function Home() {
   return (
     <>
       <div>Home</div>
+
+      <DSList
+        items={[
+          { title: "Transferência", value: 50, date: new Date("2024-10-22") },
+          { title: "Depósito", value: 120, date: new Date("2024-10-21") },
+          { title: "Transferência", value: -86, date: new Date("2024-10-02") },
+        ]}
+      ></DSList>
 
       <DSSelect
         placeholder={"Selecione o tipo de transação"} 

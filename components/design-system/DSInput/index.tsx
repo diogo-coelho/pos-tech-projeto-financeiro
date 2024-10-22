@@ -18,6 +18,7 @@ const Input = (props: InputProps) => {
         placeholder={ props.placeholder }
         disabled={ props.disabled || false }
         value={props.currentValue || props['current-value']}
+        onChange={ (event) => props.handleOnChange?.({ event }) }
         {...props}
       />
       { props.suffix && 
