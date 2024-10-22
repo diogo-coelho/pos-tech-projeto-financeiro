@@ -29,6 +29,7 @@ export default function Home() {
           "DOC/TED",
           "Empréstimo e Financiamento"
         ]}
+        selectedValue="DOC/TED"
       ></DSSelect>
     </>
   );

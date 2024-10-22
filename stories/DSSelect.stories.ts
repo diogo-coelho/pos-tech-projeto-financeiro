@@ -23,3 +23,16 @@ export const Default: Story = {
     ]
   }
 }
+
+export const SelectedValue: Story = {
+  args: {
+    type: "text",
+    placeholder: "Selecione o tipo de transação",
+    selectedValue: "DOC/TED",
+    options: [
+      "Câmbio de Moeda",
+      "DOC/TED",
+      "Empréstimo e Financiamento"
+    ],
+  }
+}

@@ -18,3 +18,18 @@ export const Default: Story = {
     type: "text"
   }
 }
+
+export const TypeNumber: Story = {
+  args: {
+    type: "number",
+    placeholder: "Insira um número"
+  }
+}
+
+export const CurrentValue: Story = {
+  args: {
+    type: "text",
+    currentValue: "John Doe",
+    placeholder: "Insira um nome"
+  }
+}

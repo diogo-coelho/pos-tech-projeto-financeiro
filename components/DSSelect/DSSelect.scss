@@ -83,7 +83,8 @@
           border-bottom-right-radius: var(--bb-border-radius-small);
         }
 
-        & li:hover {
+        & li:hover,
+        & li.selected {
           font-weight: var(--bb-font-weight-bold);
           background-color: var(--bb-color-dark-grey);
           cursor: pointer;

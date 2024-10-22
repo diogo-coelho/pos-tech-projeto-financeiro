@@ -2,26 +2,26 @@ import { InputProps } from './ds_input';
 import './DSInput.scss';
 
 const Input = (props: InputProps) => {
-  const className = (): string => {
+  const className = (mainClass: string): string => {
     return [
-      `input`,
+      mainClass,
       (props.inputSize || props['input-size']) ?? ``,
       props.align ? `align-${props.align}` : ``,
     ].toString().replaceAll(",", " ").trim();
   }
 
   return (
-    <div className={`input-container ${className()}`} >
+    <div className={className('input-container')} >
       <input
-        className={className()}
+        className={className('input')}
         type={ props.type || `text` } 
         placeholder={ props.placeholder }
         disabled={ props.disabled || false }
-        value={props.currentValue}
+        value={props.currentValue || props['current-value']}
         {...props}
       />
       { props.suffix && 
-        <div className={`suffix${props.active ? ` active` : ''}`}>
+        <div className={`suffix${props.active === 'true' ? ` active` : ''}`}>
           <img src={`/images/${ props.suffix }`} alt="Icon" />
         </div>
       }

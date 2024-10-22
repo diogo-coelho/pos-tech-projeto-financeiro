@@ -46,6 +46,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   inputSize?: InputSize,
   "input-size"?: InputSize,
   suffix?: IconType,
-  active?: boolean,
+  active?: string,
   currentValue?: string,
+  "current-value"?: string,
 }
