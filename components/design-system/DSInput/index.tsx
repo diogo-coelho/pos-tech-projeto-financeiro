@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { InputProps } from './ds_input';
 import './DSInput.scss';
 
@@ -23,7 +24,7 @@ const Input = (props: InputProps) => {
       />
       { props.suffix && 
         <div className={`suffix${props.active === 'true' ? ` active` : ''}`}>
-          <img src={`/images/${ props.suffix }`} alt="Icon" />
+          <Image src={`/images/${ props.suffix }`} alt="Icon" />
         </div>
       }
     </div>
