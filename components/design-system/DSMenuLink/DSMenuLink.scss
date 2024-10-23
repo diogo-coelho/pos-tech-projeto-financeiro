@@ -4,8 +4,12 @@
     font-weight: var(--bb-font-weight-light);
     padding-top: var(--bb-spacing-medium);
     padding-bottom: var(--bb-spacing-medium);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid var(--bb-color-black);
+    width: 100%;
+    max-width: 150px;
 
     &:hover {
       font-weight: var(--bb-font-weight-bold);
@@ -17,7 +21,19 @@
     }      
     
     &:last-child {
-      border-bottom: 0px;
+      border-bottom: 1px solid transparent;
+    }
+
+    &.no-borders {
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid var(--bb-color-light-green-alpha);
+
+        & * {
+          color: var(--bb-color-light-green);
+        }
+      }
     }
   }
 }

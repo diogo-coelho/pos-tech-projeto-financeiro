@@ -3,12 +3,18 @@ export interface MenuItem {
   label: string
 }
 
+type ViewPort = 
+  'mobile-view' |
+  'tablet-view' |
+  'desktop-view';
+
 export interface MenuProps {
   menuItems?: MenuItem[],
   active?: boolean,
+  viewport?: ViewPort,
   handleOnClose?: (
     data: { 
       args?: T | T[], 
-      event: MouseEvent<HTMLButtonElement, MouseEvent> 
+      event?: MouseEvent<HTMLButtonElement, MouseEvent> 
   }) => T,
 }

@@ -3,5 +3,6 @@ import { ReactNode } from "react"
 
 export interface MenuLinkProps {
   href: Url,
+  noBorders?: boolean
   children?: ReactNode,
 }

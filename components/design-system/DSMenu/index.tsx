@@ -1,19 +1,33 @@
+import { useRef } from "react";
 import { MenuProps } from "./ds_menu";
 import DSMenuLink from "../DSMenuLink";
 import './DSMenu.scss';
 import DSIconButton from "../DSIconButton";
+import useOutsideClick from "@/shared/directives/useOutsideClick";
 
 const DSMenu = (props: MenuProps) => {
+  const ref = useRef<HTMLDivElement>(null)
+  
   const getClassName = (mainClass: string): string => {
     return [
       mainClass,
-      props.active ? `active` : ``
+      props.active ? `active` : ``,
+      props.viewport ?? ''
     ].toString().replaceAll(",", " ").trim();
   }
 
+  const isTabletViewport = (): boolean => props.viewport! && props.viewport === 'tablet-view'
+
+  const handleClickOutside = () => props.handleOnClose?.({ args: true });
+  useOutsideClick({ ref, handler: handleClickOutside });
+  
+
   return (
     <>
-      <nav className={ getClassName("menu-container")}>
+      <nav 
+        ref={ref}
+        className={ getClassName("menu-container")}        
+      >
         <div>
           <ul>
             { props.menuItems &&
@@ -21,6 +35,7 @@ const DSMenu = (props: MenuProps) => {
                 <DSMenuLink 
                   key={index}
                   href={item.href}
+                  noBorders={isTabletViewport()}
                   {...props}
                 >  
                 { item.label }              
