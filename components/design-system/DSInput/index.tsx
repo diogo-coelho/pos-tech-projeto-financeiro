@@ -24,7 +24,7 @@ const Input = (props: InputProps) => {
       />
       { props.suffix && 
         <div className={`suffix${props.active === 'true' ? ` active` : ''}`}>
-          <Image src={`/images/${ props.suffix }`} alt="Icon" />
+          <Image src={`/images${ props.suffix }`} alt="Icon" width={10} height={6} />
         </div>
       }
     </div>

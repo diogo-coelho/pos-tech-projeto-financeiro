@@ -1,0 +1,29 @@
+.menu {
+  &-container {
+    position: absolute;
+    top: 0px;
+    width: 172px;
+    height: 259px;
+    visibility: hidden;
+
+    div {
+      position: relative;
+
+      ul {
+        list-style: none;
+        background-color: var(--bb-color-bg);
+        padding: var(--bb-spacing-large);
+      }
+
+      .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+
+    &.active {
+      visibility: visible;
+    }
+  }
+}

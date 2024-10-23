@@ -1,0 +1,23 @@
+.menu-link {
+  &-container {
+    font-size: var(--bb-font-size-medium);
+    font-weight: var(--bb-font-weight-light);
+    padding-top: var(--bb-spacing-medium);
+    padding-bottom: var(--bb-spacing-medium);
+    text-align: center;
+    border-bottom: 1px solid var(--bb-color-black);
+
+    &:hover {
+      font-weight: var(--bb-font-weight-bold);
+      border-bottom: 1px solid var(--bb-color-light-green-alpha);
+
+      & * {
+        color: var(--bb-color-red);
+      }
+    }      
+    
+    &:last-child {
+      border-bottom: 0px;
+    }
+  }
+}

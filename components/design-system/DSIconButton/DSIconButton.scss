@@ -1,0 +1,10 @@
+.icon-button {
+  &-container {
+    background-color: transparent;
+    border-color: transparent;
+
+    &.pointer {
+      cursor: pointer;
+    }
+  }
+}
