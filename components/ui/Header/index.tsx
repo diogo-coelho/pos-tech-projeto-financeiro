@@ -2,12 +2,11 @@
 
 import { useState } from 'react';
 
-import { HeaderProps } from "./header";
 import './Header.scss';
 import DSMenu from '@/components/design-system/DSMenu';
 import DSIconButton from '@/components/design-system/DSIconButton';
 
-const Header = (props: HeaderProps) => {
+const Header = () => {
   const [active, setActive] = useState<boolean>(false);
 
   const toggleActive = (active: boolean): void => {

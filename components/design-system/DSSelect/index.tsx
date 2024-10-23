@@ -25,7 +25,7 @@ const DSSelect = (props: SelectProps) => {
   React.useEffect(() => {
     if (!props.selectedValue) return;
     setCurrentValue(props.selectedValue);
-  }, [])
+  }, [props.selectedValue])
 
   return (
     <>

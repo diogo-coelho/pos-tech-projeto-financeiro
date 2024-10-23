@@ -1,5 +1,3 @@
-import { MenuLinkProps } from "../DSMenuLink/ds_menu_link";
-
 export interface MenuItem {
   href: string,
   label: string
