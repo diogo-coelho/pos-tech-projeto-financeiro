@@ -1,0 +1,145 @@
+.balance {
+  &-container {
+    position: relative;
+    width: 100%;
+    background-color: var(--bb-color-green);
+    margin: var(--bb-spacing-medium);
+    border-radius: var(--bb-spacing-small);
+    z-index: -1;
+
+    & .pixels-top {
+      position: absolute;
+      top: 0px;
+      z-index: -1;
+    }
+
+    & .pixels-bottom {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      z-index: -1;
+    }
+
+    & .manager {
+      position: absolute;
+      bottom: 0px;
+      z-index: -1;
+    }
+
+    & .general-info {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding-top: var(--bb-spacing-large);
+
+      & .greetings {
+        display: flex;
+        flex-direction: column;
+        gap: var(--bb-spacing-large);
+        padding-bottom: var(--bb-spacing-large);
+
+        h1 {
+          color: var(--bb-color-white);
+          font-weight: var(--bb-font-weight-bold);
+          font-size: var(--bb-font-size-extra-large);
+        }
+
+        p {
+          color: var(--bb-color-white);
+          font-weight: var(--bb-font-weight-normal);
+          font-size: var(--bb-font-size-small);
+        }
+      }
+
+      & .account-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        div:first-child {
+          color: var(--bb-color-white);
+          border-bottom: 2px solid var(--bb-color-white);
+          padding-bottom: var(--bb-spacing-medium);
+
+          p {
+            font-size: var(--bb-font-size-large);
+          }
+        }
+
+        div:last-child {
+          padding-top: var(--bb-spacing-medium);
+          display: flex;
+          flex-direction: column;
+          color: var(--bb-color-white);
+          gap: var(--bb-spacing-small);
+
+          p {
+            font-size: var(--bb-font-size-medium);
+            font-weight: var(--bb-font-weight-light);
+          }
+
+          h2 {
+            font-size: var(--bb-font-size-xx-large);
+            font-weight: var(--bb-font-weight-light);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .balance {
+    &-container {
+      margin: var(--bb-spacing-large);
+      margin-top: var(--bb-spacing-small);
+      
+      & .pixels-top {
+        top: calc(100% - 142px);
+      }
+
+      & .pixels-bottom {
+        bottom: calc(100% - 142px);
+      }
+
+      & .manager {
+        bottom: 0px;
+        left: 20px;
+      }
+
+      & .general-info {
+        width: 100%;
+        flex-direction: initial;
+        justify-content: space-between;
+
+        & .greetings {
+          width: 100%;
+          flex-basis: start;
+          padding-left: var(--bb-spacing-large);
+        }
+
+        & .account-info {
+          width: 100%;
+          position: relative;
+          top: 70px;
+
+          div:first-child {
+            width: 100%;
+            max-width: 175px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .balance {
+    &-container {
+      width: 690px;
+      height: 402px;
+      margin-top: var(--bb-spacing-large);
+    }
+  }
+}

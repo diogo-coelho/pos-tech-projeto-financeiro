@@ -1,0 +1,44 @@
+.main{
+  &-container {
+    background-color: var(--bb-color-bg);
+    display: flex;
+    height: auto;
+    min-height: calc(100vh - 96px);
+    width: 100%;
+    position: relative;
+    top: 96px;
+    z-index: -1;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .main{
+    &-container {
+      top: 181px;
+      height: auto;
+      min-height: calc(100vh - 181px);
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .container {
+    position: relative;
+    width: 100%;
+    background-color: var(--bb-color-bg);
+    z-index: -1;
+    top: 96px;
+    height: auto;
+    min-height: calc(100vh - 96px);
+
+    .main {
+      &-container {
+        max-width: 1168px;
+        margin: 0 auto;
+        top: 0px;
+        height: inherit;
+        min-height: inherit;
+      }
+    }
+  }
+}

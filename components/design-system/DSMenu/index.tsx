@@ -19,8 +19,7 @@ const DSMenu = (props: MenuProps) => {
   const isTabletViewport = (): boolean => props.viewport! && props.viewport === 'tablet-view'
 
   const handleClickOutside = () => props.handleOnClose?.({ args: true });
-  useOutsideClick({ ref, handler: handleClickOutside });
-  
+  useOutsideClick({ ref, handler: handleClickOutside });  
 
   return (
     <>
