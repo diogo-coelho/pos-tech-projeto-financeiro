@@ -10,6 +10,7 @@ import DSInput from "@/components/design-system/DSInput";
 import DSSelect from "@/components/design-system/DSSelect";
 import React, { useState } from 'react';
 import { InputSize } from '@/components/design-system/DSInput/ds_input';
+import { Size } from '@/components/design-system/DSButton/ds_button';
 
 const Transaction = () => {
   const TABLET_VIEW_SIZE = 720;
@@ -17,11 +18,11 @@ const Transaction = () => {
   const [screenWidth, setScreenWidth] = useState<number>(0);
 
   const getSelectSize = (): InputSize => {
-    if (screenWidth < TABLET_VIEW_SIZE) return 'small'
+    if (screenWidth < TABLET_VIEW_SIZE) return 'normal'
     return 'large'
   }
 
-  const getInputSize = (): InputSize => {
+  const getInputSize = (): InputSize | Size => {
     if (screenWidth < TABLET_VIEW_SIZE) return 'small'
     return 'medium'
   }
@@ -69,7 +70,7 @@ const Transaction = () => {
 
             <DSButton 
               type="button" 
-              size={ getInputSize() as InputSize }
+              size={ getInputSize() as Size }
             >Concluir transação</DSButton>
           </div>
         </form>

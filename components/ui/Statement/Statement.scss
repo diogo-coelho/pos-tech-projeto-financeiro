@@ -3,5 +3,64 @@
     background-color: var(--bb-color-white);
     margin: var(--bb-spacing-large);
     margin-top: 0px;
+    padding: var(--bb-spacing-large);
+    border-radius: var(--bb-border-radius-small);
+
+    .internal-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .title-container {
+        padding-bottom: var(--bb-spacing-large);
+
+        h1 {
+          font-size: var(--bb-font-size-extra-large);
+          font-weight: var(--bb-font-weight-superbold);
+        }
+      }
+
+      .lists {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: var(--bb-spacing-large);
+
+        h2 {
+          font-size: var(--bb-font-size-small);
+          font-weight: var(--bb-font-weight-bold);
+          color: var(--bb-color-light-green);
+        }
+
+        &-list {
+          list-style: none;
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .statement {
+    &-container {
+      .internal-wrapper {
+        width: 232px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .statement {
+    &-container {
+      margin: 0;
+      width: 282px;
+      margin: var(--bb-spacing-large) 0;
+
+      .internal-wrapper {
+        width: 100%
+      }
+    }
   }
 }

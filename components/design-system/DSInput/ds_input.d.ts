@@ -27,6 +27,7 @@ type InputAttributeType =
 
 type InputSize =
   'small' |
+  'normal' |
   'medium' |
   'large';
 
