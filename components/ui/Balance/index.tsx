@@ -14,7 +14,7 @@ const Balance = () => {
 
   return (
     <>
-      <div className="balance-container">
+      <section className="balance-container">
         <div className="general-info">
           <div className="greetings">
             <h1>Olá, Usuário! :)</h1>
@@ -36,7 +36,7 @@ const Balance = () => {
         <PixelsTopSVG className="pixels-top"></PixelsTopSVG>
         <PixelsBottomSVG className="pixels-bottom"></PixelsBottomSVG>
         <ManagerSVG className="manager"></ManagerSVG>
-      </div>
+      </section>
     </>
   )
 }

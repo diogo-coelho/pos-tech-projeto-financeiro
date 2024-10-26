@@ -1,6 +1,11 @@
 // ----------- Design Tokens ------------ //
 
 :root {
+  // ----------- View Ports --------------- //
+  --bb-viewport-mobile: 360px;
+  --bb-viewport-tablet: 720px;
+  --bb-viewport-desktop: 1120px;
+  
   // ----------- Color Tokens ------------- //
   --bb-color-white: #FFFFFF;
   --bb-color-black: #000000;

@@ -93,7 +93,7 @@
   }
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width:720px) {
   .balance {
     &-container {
       margin: var(--bb-spacing-large);
@@ -139,7 +139,7 @@
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1120px) {
   .balance {
     &-container {
       width: 690px;

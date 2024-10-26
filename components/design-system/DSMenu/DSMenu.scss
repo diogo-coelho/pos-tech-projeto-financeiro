@@ -65,9 +65,11 @@
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1120px) {
   .menu {
     &-container {
+      background-color: var(--bb-color-white);
+      
       &.desktop-view {
         display: flex;
         margin-top: var(--bb-spacing-large);
@@ -76,10 +78,10 @@
         width: 180px;
         justify-content: center;
         border-radius: var(--bb-border-radius-small);
+        height: auto;
+        min-height: calc(100vh - 144px);
 
         div {
-          position: relative;
-
           ul {
             padding-top: var(--bb-spacing-medium);
           }

@@ -9,7 +9,7 @@ import { ViewPort } from '@/components/design-system/DSMenu/ds_menu';
 
 const Header = () => {
   const TABLET_VIEW_SIZE = 720;
-  const DESKTOP_VIEW_SIZE = 1920;
+  const DESKTOP_VIEW_SIZE = 1120;
 
   const [active, setActive] = useState<boolean>(false);
   const [screenWidth, setScreenWidth] = useState<number>(0);

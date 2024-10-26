@@ -4,14 +4,9 @@ import { ViewPort } from "@/components/design-system/DSMenu/ds_menu";
 import React, { useState } from "react";
 
 const SideMenu = () => {
-  const DESKTOP_VIEW_SIZE = 1920;
+  const DESKTOP_VIEW_SIZE = 1120;
   const [screenWidth, setScreenWidth] = useState<number>(0);
-  const [isHidden, setIsHidden] = useState<boolean>(true);
-
-  const getViewPort = (): string => {
-    if (screenWidth >= DESKTOP_VIEW_SIZE) return 'desktop-view'
-    return ''
-  }
+  const [isHidden, setIsHidden] = useState<boolean>(false);
 
   React.useEffect(() => {
     setScreenWidth(window.innerWidth); 
@@ -31,17 +26,19 @@ const SideMenu = () => {
 
   return (
     <>
-      <DSMenu
-        active={true}
-        viewport={getViewPort() as ViewPort}
-        menuItems={[
-          { label: "Início", href:"/" },
-          { label: "Transferências", href:"/transferencias" },
-          { label: "Investimentos", href:"/investimentos" },
-          { label: "Outros serviços", href:"/outros-servicos" }
-        ]} 
-        hidden={isHidden}
-      ></DSMenu>
+      <aside className="side-menu">
+        <DSMenu
+          active={true}
+          viewport="desktop-view"
+          menuItems={[
+            { label: "Início", href:"/" },
+            { label: "Transferências", href:"/transferencias" },
+            { label: "Investimentos", href:"/investimentos" },
+            { label: "Outros serviços", href:"/outros-servicos" }
+          ]} 
+          hidden={isHidden}
+        ></DSMenu>
+      </aside>
     </>
   )
 }

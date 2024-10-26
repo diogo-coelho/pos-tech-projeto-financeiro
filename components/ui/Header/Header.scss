@@ -24,7 +24,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 720px) {
   .header {
     &-area {
       &:first-child {
@@ -34,7 +34,7 @@
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1120px) {
   .header {
     &-container {
       max-width: 1168px;

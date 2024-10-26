@@ -1,0 +1,9 @@
+.side-menu {
+  display: none;
+}
+
+@media only screen and (min-width: 1120px) {
+  .side-menu {
+    display: flex;
+  }
+}
