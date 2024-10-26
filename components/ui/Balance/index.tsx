@@ -4,6 +4,7 @@ import React from 'react';
 import PixelsTopSVG from '@/public/svgs/pixels_top.svg';
 import PixelsBottomSVG from '@/public/svgs/pixels_bottom.svg';
 import ManagerSVG from '@/public/svgs/manager.svg';
+import EyeSVG from '@/public/svgs/eye.svg'
 
 const Balance = () => {
   const getTodaysDateFormatted = (): string => {
@@ -23,6 +24,7 @@ const Balance = () => {
           <div className="account-info">
             <div>
               <p>Saldo</p>
+              <EyeSVG></EyeSVG>
             </div>
             <div>
               <p>Conta Corrente</p>

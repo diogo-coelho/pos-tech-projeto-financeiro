@@ -6,6 +6,7 @@
     margin: var(--bb-spacing-medium);
     border-radius: var(--bb-spacing-small);
     z-index: -1;
+    max-height: 655px;
 
     & .pixels-top {
       position: absolute;
@@ -58,6 +59,9 @@
         justify-content: start;
 
         div:first-child {
+          display: flex;
+          gap: var(--bb-spacing-large);
+          align-items: center;
           color: var(--bb-color-white);
           border-bottom: 2px solid var(--bb-color-white);
           padding-bottom: var(--bb-spacing-medium);
@@ -94,6 +98,7 @@
     &-container {
       margin: var(--bb-spacing-large);
       margin-top: var(--bb-spacing-small);
+      max-height: 402px;
       
       & .pixels-top {
         top: calc(100% - 142px);
@@ -140,6 +145,32 @@
       width: 690px;
       height: 402px;
       margin-top: var(--bb-spacing-large);
+
+      & .pixels-top {
+        display: none;
+      }
+
+      & .pixels-bottom {
+        display: none;
+      }
+
+      & .manager {
+        display: none;
+      }
+
+      & .general-info {
+        & .account-info {
+          top: 90px;
+
+          div:first-child {
+            border-bottom: 2px solid var(--bb-color-red);
+
+            svg path {
+              fill: var(--bb-color-red);
+            }
+          }
+        }
+      }
     }
   }
 }

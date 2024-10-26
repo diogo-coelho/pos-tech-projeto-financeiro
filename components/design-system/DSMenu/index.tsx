@@ -12,7 +12,8 @@ const DSMenu = (props: MenuProps) => {
     return [
       mainClass,
       props.active ? `active` : ``,
-      props.viewport ?? ''
+      props.viewport ?? '',
+      props.hidden ? 'hidden' : '',
     ].toString().replaceAll(",", " ").trim();
   }
 

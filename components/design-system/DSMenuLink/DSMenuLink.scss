@@ -37,3 +37,21 @@
     }
   }
 }
+
+@media only screen and (min-width: 1920) {
+  .menu-link {
+    &-container {
+      border-bottom: 1px solid var(--bb-color-green);
+      color: var(--bb-color-green);
+
+      &:hover {
+        font-weight: var(--bb-font-weight-bold);
+        border-bottom: 1px solid var(--bb-color-green);
+  
+        & * {
+          color: var(--bb-color-green);
+        }
+      } 
+    }
+  }
+}

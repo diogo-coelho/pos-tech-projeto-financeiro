@@ -58,5 +58,37 @@
         }
       }
     }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .menu {
+    &-container {
+      &.desktop-view {
+        display: flex;
+        margin-top: var(--bb-spacing-large);
+        margin-bottom: var(--bb-spacing-large);
+        background-color: var(--bb-color-white);
+        width: 180px;
+        justify-content: center;
+        border-radius: var(--bb-border-radius-small);
+
+        div {
+          position: relative;
+
+          ul {
+            padding-top: var(--bb-spacing-medium);
+          }
+  
+          .close-button {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
