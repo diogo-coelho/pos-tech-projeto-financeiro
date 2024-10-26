@@ -46,6 +46,8 @@
 
         ul {
           width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
           height: auto;
           padding: var(--bb-spacing-medium);
           display: flex;
@@ -80,7 +82,7 @@
         width: 180px;
         justify-content: center;
         border-radius: var(--bb-border-radius-small);
-        height: auto;
+        height: calc(100% - 48px);
         min-height: calc(100vh - 144px);
 
         div {
