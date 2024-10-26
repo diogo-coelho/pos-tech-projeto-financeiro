@@ -46,7 +46,12 @@
 
   &.small {
     width: 100%;
-    max-width: 280px;
+    max-width: 144px;
+  }
+
+  &.medium {
+    width: 100%;
+    max-width: 250px;
   }
 
   &.large {

@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const SideMenu = () => {
   const DESKTOP_VIEW_SIZE = 1120;
   const [screenWidth, setScreenWidth] = useState<number>(0);
-  const [isHidden, setIsHidden] = useState<boolean>(false);
+  const [isHidden, setIsHidden] = useState<boolean>(true);
 
   React.useEffect(() => {
     setScreenWidth(window.innerWidth); 

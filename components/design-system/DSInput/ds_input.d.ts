@@ -27,6 +27,7 @@ type InputAttributeType =
 
 type InputSize =
   'small' |
+  'medium' |
   'large';
 
 type AlignText = 

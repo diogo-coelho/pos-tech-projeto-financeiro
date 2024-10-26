@@ -3,10 +3,9 @@
     position: relative;
     width: 100%;
     background-color: var(--bb-color-green);
-    margin: var(--bb-spacing-medium);
     border-radius: var(--bb-spacing-small);
     z-index: -1;
-    max-height: 655px;
+    height: 655px;
 
     & .pixels-top {
       position: absolute;
@@ -96,8 +95,6 @@
 @media only screen and (min-width:720px) {
   .balance {
     &-container {
-      margin: var(--bb-spacing-large);
-      margin-top: var(--bb-spacing-small);
       max-height: 402px;
       
       & .pixels-top {
@@ -144,7 +141,6 @@
     &-container {
       width: 690px;
       height: 402px;
-      margin-top: var(--bb-spacing-large);
 
       & .pixels-top {
         display: none;

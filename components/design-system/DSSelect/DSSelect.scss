@@ -7,17 +7,19 @@
 
     &.small {
       width: 100%;
-      max-width: 280px;
+      width: 280px;
     }
   
     &.large {
       width: 100%;
-      max-width: 355px;
+      width: 355px;
     }
   }
 
   &-dropdown {
     width: inherit;
+    position: absolute;
+    z-index: 0;
 
     &.small {
       width: 100%;

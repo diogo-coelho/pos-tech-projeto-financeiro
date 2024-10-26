@@ -32,6 +32,7 @@ const DSSelect = (props: SelectProps) => {
       <div 
         className={className("select-container")}
         onClick={() => toggleActive(!active)}
+        ref={ref}
       >
         <DSInput
           type="text" 
@@ -45,7 +46,6 @@ const DSSelect = (props: SelectProps) => {
         <div 
           className={className("select-dropdown")}
           data-active={active}
-          ref={ref}
         >
           { props.options &&
             <ul>

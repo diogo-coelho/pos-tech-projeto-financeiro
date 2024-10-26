@@ -1,0 +1,104 @@
+.transaction {
+  &-container {
+    position: relative;
+    background-color: var(--bb-color-grey-2);
+    padding: var(--bb-spacing-large);
+    margin-top: var(--bb-spacing-large);
+    border-radius: var(--bb-border-radius-small);
+    height: 633px;
+
+    & form {
+      position: relative;
+
+      & .transaction-area {
+        display: flex;
+        flex-direction: column;
+        gap: var(--bb-spacing-large);
+        align-items: center;
+
+        h1 {
+          font-size: var(--bb-font-size-extra-large);
+          font-weight: var(--bb-font-weight-superbold);
+          color: var(--bb-color-grey-3);
+        }
+
+        h2 {
+          font-size: var(--bb-font-size-medium);
+          color: var(--bb-color-grey-3);
+        }
+      }
+
+      & .transaction-area:first-child {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+      }
+
+      & .transaction-area:last-child {
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 135px;
+      }
+    }
+
+    & .pixels-top {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
+    & .pixels-bottom {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
+
+    & .credit-card {
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .transaction {
+    &-container {
+      height: 478px;
+
+      & form {
+        position: relative;
+  
+        & .transaction-area {
+          align-items: start;
+        }
+      }
+
+      & .pixels-top {
+        left: calc(100% - 144px);
+      }
+  
+      & .pixels-bottom {
+        right: calc(100% - 144px);
+      }
+  
+      & .credit-card {
+        bottom: 20px;
+        left: 270px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .transaction {
+    &-container {
+      width: 690px;
+      height: 478px;
+      
+      & .credit-card {
+        display: none;
+      }
+    }
+  }
+}

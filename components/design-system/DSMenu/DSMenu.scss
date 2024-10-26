@@ -1,13 +1,14 @@
 .menu {
   &-container {
     &.mobile-view {
-      position: absolute;
+      position: fixed;
       top: 0px;
       width: 172px;
       height: 259px;
       left: -172px;
       visibility: hidden;
       transition: left 0.3s ease-in, visibility 0.3s ease-in;
+      z-index: 2;
 
       div {
         position: relative;
@@ -38,6 +39,7 @@
       top: 96px;
       width: 100%;
       display: flex;
+      z-index: 1;
 
       div {  
         width: inherit;
