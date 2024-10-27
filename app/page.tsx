@@ -3,7 +3,7 @@ import SiteHeader from '@/components/ui/SiteHeader';
 import Presentation from '@/components/ui/Presentation';
 import Footer from '@/components/ui/Footer';
 
-export default function Home() {
+export default function Home() {  
   return (
     <>
       <div>

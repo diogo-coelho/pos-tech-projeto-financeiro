@@ -3,10 +3,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import DSButton from "@/components/design-system/DSButton";
+import MenuIconSVG from '@/public/svgs/menu_icon_2.svg';
+import { useRouter } from "next/navigation";
+
 import './SiteHeader.scss';
-import MenuIconSVG from '@/public/svgs/menu_icon_2.svg'
 
 const SiteHeader = () => {
+  const router = useRouter()
+
+  const goToLoginPage = (): void => router.push('/login');
+  const goToCreateAccountPage = (): void => router.push('/create-account');
+
   return (
     <>
       <header className="site-header">
@@ -24,8 +31,15 @@ const SiteHeader = () => {
         </div>
         <div className="flex-wrapper">
           <div className="site-header-buttons">
-            <DSButton variant="success">Abrir conta</DSButton>
-            <DSButton variant="success" outline="on">Já tenho conta</DSButton>
+            <DSButton 
+              variant="success"
+              handleOnClick={() => goToCreateAccountPage()}
+            >Abrir conta</DSButton>
+            <DSButton 
+              variant="success" 
+              outline="on"
+              handleOnClick={() => goToLoginPage()}
+            >Já tenho conta</DSButton>
           </div>
           <div className="site-header-logo">
             <Image src="/images/logo.png" priority alt="Logo Bytebank" width={145} height={32} />
