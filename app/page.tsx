@@ -1,22 +1,16 @@
-import Container from "@/components/ui/Container";
-import Header from "@/components/ui/Header";
-import Balance from "@/components/ui/Balance";
-import SideMenu from "@/components/ui/SideMenu";
-import Transaction from "@/components/ui/Transaction";
-import Statement from "@/components/ui/Statement";
+import Container from '@/components/ui/Container';
+import SiteHeader from '@/components/ui/SiteHeader';
+import Presentation from '@/components/ui/Presentation';
 
 export default function Home() {
   return (
     <>
-      <Header></Header>
-      <Container>
-        <SideMenu></SideMenu>
-        <div className="flex flex-column w-100 padding-large">
-          <Balance></Balance>
-          <Transaction></Transaction>
-        </div>
-        <Statement></Statement>
-      </Container>
+      <div>
+        <SiteHeader></SiteHeader>
+        <Container gradient="gradient-green">
+          <Presentation></Presentation>
+        </Container>
+      </div>
     </>
   );
 }

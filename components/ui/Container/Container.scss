@@ -1,14 +1,27 @@
-.main{
-  &-container {
-    background-color: var(--bb-color-bg);
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: calc(100vh - 96px);
+.container {
+  .main {
+    &-container {
+      background-color: var(--bb-color-bg);
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      min-height: calc(100vh - 96px);
+      width: 100%;
+      position: relative;
+      top: 96px;
+      z-index: 0;
+    }
+  }
+
+  &.gradient-green {
     width: 100%;
-    position: relative;
-    top: 96px;
-    z-index: 0;
+    background: var(--bb-color-gradient-green);
+    padding-top: 96px;
+
+    .main-container {
+      top: 0px;
+      background-color: transparent;
+    }
   }
 }
 

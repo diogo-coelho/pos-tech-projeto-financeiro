@@ -6,7 +6,8 @@ const DSButton: React.FC<ButtonProps> = (props: ButtonProps) => {
     return [
       `button`, 
       props.variant ?? `primary`,
-      props.size ?? ``
+      props.size ?? ``,
+      props.outline === 'on' ? `outline` : ``
     ].toString().replaceAll(",", " ").trim();
   }
 

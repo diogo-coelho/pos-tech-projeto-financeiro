@@ -5,12 +5,15 @@ type Variant =
   'secondary' |
   'success' |
   'warning' |
-  'danger';
+  'danger' |
+  'black';
 
 type Size = 
   'small' |
   'medium' |
   'large';
+
+type Outline = 'on' | 'off'
 
 type ButtonTypeAttribute = 
   'reset' |
@@ -23,6 +26,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: Size,
   type?: ButtonTypeAttribute,
   disabled?: boolean,
+  outline?: Outline,
   handleOnClick?: (
     data: { 
       args?: T | T[], 
