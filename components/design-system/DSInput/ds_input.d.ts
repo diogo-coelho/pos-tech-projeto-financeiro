@@ -36,6 +36,8 @@ type AlignText =
   'left' |
   'right';
 
+type Variant = 'secondary';
+
 export enum IconType {
   ARROW_DROP_DOWN = '/arrow_drop_down.png'
 }
@@ -45,6 +47,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   align?: AlignText,
   disabled?: boolean,
   placeholder?: string,
+  variant?: Variant,
   inputSize?: InputSize,
   "input-size"?: InputSize,
   suffix?: IconType,

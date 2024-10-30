@@ -6,6 +6,7 @@ const Input = (props: InputProps) => {
   const className = (mainClass: string): string => {
     return [
       mainClass,
+      props.variant ?? '',
       (props.inputSize || props['input-size']) ?? ``,
       props.align ? `align-${props.align}` : ``,
     ].toString().replaceAll(",", " ").trim();

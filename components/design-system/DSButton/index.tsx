@@ -17,7 +17,6 @@ const DSButton: React.FC<ButtonProps> = (props: ButtonProps) => {
       type={props.type || 'button'}
       disabled={props.disabled || false}
       onClick={ (event) => props.handleOnClick?.({ event }) }
-      {...props}
     >
       { props.children }
     </button>

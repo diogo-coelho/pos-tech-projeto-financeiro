@@ -42,6 +42,19 @@
     &.align-right {
       text-align: right;
     }
+
+    &.secondary {
+      border: 1px solid var(--bb-color-grey-3);
+      color: var(--bb-color-black);
+
+      &::placeholder {
+        color: var(--bb-color-grey);
+      }
+
+      &:focus-within {
+        outline: 1px solid var(--bb-color-grey-3);
+      }
+    }
   }
 
   &.small {

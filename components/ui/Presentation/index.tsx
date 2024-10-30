@@ -3,8 +3,14 @@
 import DSButton from "@/components/design-system/DSButton";
 import "./Presentation.scss";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Presentation = () => {
+  const router = useRouter()
+
+  const goToLoginPage = (): void => router.push('/login');
+  const goToCreateAccountPage = (): void => router.push('/create-account');
+  
   return (
     <>
       <div className="presentation-container">
@@ -19,8 +25,8 @@ const Presentation = () => {
             />
           </figure>
           <div className="buttons">
-            <DSButton variant="black">Abrir conta</DSButton>
-            <DSButton variant="black" outline="on">Já tenho conta</DSButton>
+            <DSButton variant="black" handleOnClick={() => goToCreateAccountPage()}>Abrir conta</DSButton>
+            <DSButton variant="black" outline="on" handleOnClick={() => goToLoginPage()}>Já tenho conta</DSButton>
           </div>
         </div>
 

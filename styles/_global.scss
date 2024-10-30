@@ -25,3 +25,11 @@ body {
     padding: var(--bb-spacing-large);
   }
 }
+
+.fixed {
+  position: fixed;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}

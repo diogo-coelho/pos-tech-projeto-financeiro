@@ -3,5 +3,5 @@ type Gradient =
 
 export interface ContainerProps {
   children: ReactNode,
-  gradient?: Gradient
+  gradient?: Gradient,
 }
