@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes, MutableRefObject } from "react";
 import { IconType } from './ds_icon';
 
 type InputAttributeType =
@@ -29,7 +29,8 @@ type InputSize =
   'small' |
   'normal' |
   'medium' |
-  'large';
+  'large' |
+  'full';
 
 type AlignText = 
   'center' |
@@ -54,9 +55,13 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   active?: string,
   currentValue?: string,
   "current-value"?: string,
+  error?: string,
   handleOnChange?: (
     data: { 
       args?: T | T[], 
-      event: MouseEvent<HTMLButtonElement, MouseEvent> 
+      event: ChangeEvent<HTMLInputElement>
   }) => T,
+  handleOnClick?: (
+    event: MouseEvent<HTMLButtonElement, MouseEvent> 
+  ) => T
 }

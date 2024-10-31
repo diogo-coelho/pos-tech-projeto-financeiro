@@ -76,6 +76,10 @@
     width: 100%;
     max-width: 355px;
   }
+
+  &.full {
+    width: 100%;
+  }
   
   .input + .suffix {
     position: absolute;
