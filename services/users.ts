@@ -1,4 +1,5 @@
 import { AuthorizeFormData, UserFormData } from "@/components/ui/RegistrationForm/registration-form"
+import { NextApiResponse } from "next"
 
 const createUser = async (userFormData: UserFormData): Promise<Response> => {
   const response = await fetch('/api/users', {
@@ -8,7 +9,7 @@ const createUser = async (userFormData: UserFormData): Promise<Response> => {
     },
     body: JSON.stringify(userFormData)
   })
-  return await response.json()
+  return await response
 }
 
 const authorizeUser = async (authorizeFormData: AuthorizeFormData): Promise<Response> => {

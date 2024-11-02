@@ -1,27 +1,17 @@
 import connectDatabase from "@/lib/db";
 import UserModel, { User } from "@/model/User";
+import { NextResponse } from "next/server";
 
-export async function POST(req: Request): Promise<Response> {
+export async function POST(request: Request) {
   await connectDatabase();
 
-  const data: User = await req.json();
-  const users: User[] = await UserModel.find({ email: data.email });
-  if (users.length > 0) {
-    return new Response(JSON.stringify({
-      message: "Usuário já cadastrado no banco"
-    }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json'}
-    });
+  const data: User = await request.json();
+  const user: User | null = await UserModel.findOne({ email: data.email });
+  if (user) {
+    return NextResponse.json({ message: 'Usuário já cadastrado' }, { status: 400 })
   }
 
   const newUser = new UserModel(data);
   await newUser.save();
-
-  return new Response(JSON.stringify({
-    message: "Usuário criado com sucesso"
-  }), {
-    status: 201,
-    headers: { 'Content-Type': 'application/json'}
-  });
+  return NextResponse.json({ message: 'Usuário criado com sucesso'}, { status: 201 })
 }

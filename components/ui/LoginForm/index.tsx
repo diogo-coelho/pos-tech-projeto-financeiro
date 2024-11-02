@@ -55,9 +55,6 @@ const LoginForm = () => {
         email: email as string
       });
       if (response.status !== 200) throw response
-      const { token } = await (response as Response).json()
-      localStorage.setItem('token', token)
-
       router.push('/dashboard')
       
     } catch (error: unknown | Response) { 
