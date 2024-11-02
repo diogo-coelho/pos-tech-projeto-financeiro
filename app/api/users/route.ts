@@ -4,7 +4,8 @@ import UserModel, { User } from "@/model/User";
 export async function POST(req: Request): Promise<Response> {
   await connectDatabase();
 
-  const users: User[] = await UserModel.find();
+  const data: User = await req.json();
+  const users: User[] = await UserModel.find({ email: data.email });
   if (users.length > 0) {
     return new Response(JSON.stringify({
       message: "Usuário já cadastrado no banco"
@@ -13,7 +14,7 @@ export async function POST(req: Request): Promise<Response> {
       headers: { 'Content-Type': 'application/json'}
     });
   }
-  const data: User = await req.json();
+
   const newUser = new UserModel(data);
   await newUser.save();
 
