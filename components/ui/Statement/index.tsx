@@ -2,15 +2,17 @@
 
 import React, { useState } from 'react';
 import './Statement.scss';
-import { ListItem } from '@/components/design-system/DSList/ds_list';
 import { getNameOfMonth } from '@/shared/utils/DateUtils';
 import DSList from '@/components/design-system/DSList';
+import { StatementType } from '@/types/Account';
+import { StatementProps } from './statement';
 
-type ReducedArray = { [key: string] : ListItem[] }
+type ReducedArray = { [key: string] : StatementType[] }
 
-const Statement = () => {
-  const [statementByMonth, setStatementByMonth] = useState<Map<string, ListItem[]>>(new Map([]))
+const Statement = (props: StatementProps) => {
+  const [statementByMonth, setStatementByMonth] = useState<Map<string, StatementType[]>>(new Map([]))
 
+  /** 
   const listaDeExtrato = [
     { title: "Transferência", value: 500, date: new Date(2024, 10, 26) },
     { title: "Transferência", value: 500, date: new Date(2024, 10, 10) },
@@ -19,17 +21,19 @@ const Statement = () => {
     { title: "Depósito", value: 500, date: new Date(2024, 9, 3) },
     { title: "Depósito", value: 500, date: new Date(2024, 8, 30) },
     { title: "Transferência", value: 500, date: new Date(2024, 8, 15) }
-  ]
+  ]*/
 
   const groupByMonths = (): void => {
     const accumulator: ReducedArray = {}
 
-    listaDeExtrato.forEach((statement: ListItem) => {
+    if (!props.statementList) return
+
+    props.statementList.forEach((statement: StatementType) => {
       const month = getNameOfMonth(statement.date.getMonth());
       if (!accumulator[month]) accumulator[month] = []
       accumulator[month].push(statement)
     })
-    const newMap = new Map<string, ListItem[]>(Object.entries(accumulator));
+    const newMap = new Map<string, StatementType[]>(Object.entries(accumulator));
 
     setStatementByMonth(newMap)
   }

@@ -8,11 +8,7 @@ import { accountInformation } from "@/services/account";
 
 export default async function Dashboard() {
   const response = await accountInformation();
-  console.log('response', response);
   const { account, user } = await response.json();
-
-  console.log('user', user)
-  console.log('account', account)
 
   return (
     <>
@@ -23,10 +19,15 @@ export default async function Dashboard() {
       <Container>
         <SideMenu></SideMenu>
         <div className="flex flex-column w-100 padding-large">
-          <Balance></Balance>
+          <Balance 
+            userName={user.name} 
+            accountCurrentValue={account.currentValue}
+          ></Balance>
           <Transaction></Transaction>
         </div>
-        <Statement></Statement>
+        <Statement
+          statementList={account.statement}
+        ></Statement>
       </Container>
     </>
   );

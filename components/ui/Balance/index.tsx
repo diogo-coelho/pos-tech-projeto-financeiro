@@ -1,12 +1,15 @@
-import { formatDateToFullStringDate, getNameOfDayOfTheWeek } from '@/shared/utils/DateUtils';
-import './Balance.scss';
 import React from 'react';
+import { formatDateToFullStringDate, getNameOfDayOfTheWeek } from '@/shared/utils/DateUtils';
 import PixelsTopSVG from '@/public/svgs/pixels_top.svg';
 import PixelsBottomSVG from '@/public/svgs/pixels_bottom.svg';
 import ManagerSVG from '@/public/svgs/manager.svg';
 import EyeSVG from '@/public/svgs/eye.svg';
+import { BalanceProps } from './balance';
 
-const Balance = () => {
+import './Balance.scss';
+import { formatNumberToMonetaryValueString } from '@/shared/utils/StringUtils';
+
+const Balance = (props: BalanceProps) => {
   const getTodaysDateFormatted = (): string => {
     const date = new Date();
     return `${getNameOfDayOfTheWeek(date.getDay())}, ${formatDateToFullStringDate(date)}`
@@ -17,7 +20,7 @@ const Balance = () => {
       <section className="balance-container">
         <div className="general-info">
           <div className="greetings">
-            <h1>Olá, Usuário! :)</h1>
+            <h1>Olá, { props.userName }! :)</h1>
             <p>{ getTodaysDateFormatted() }</p>
           </div>
 
@@ -28,7 +31,7 @@ const Balance = () => {
             </div>
             <div>
               <p>Conta Corrente</p>
-              <h2>R$ 2.500,00</h2>
+              <h2>{ formatNumberToMonetaryValueString(props.accountCurrentValue) }</h2>
             </div>
           </div>
         </div>

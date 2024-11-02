@@ -59,7 +59,8 @@
       margin: var(--bb-spacing-large) 0;
 
       .internal-wrapper {
-        width: 100%
+        width: 100%;
+        min-width: 282px;
       }
     }
   }
