@@ -1,9 +1,5 @@
-export interface ListItem {
-  title: string,
-  value: number,
-  date: Date
-}
+import { StatementType } from "@/types/Account"
 
 export interface ListProps {
-  items: ListItem[]
+  items: StatementType[]
 }

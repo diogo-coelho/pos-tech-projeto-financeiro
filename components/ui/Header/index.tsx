@@ -6,8 +6,9 @@ import './Header.scss';
 import DSMenu from '@/components/design-system/DSMenu';
 import DSIconButton from '@/components/design-system/DSIconButton';
 import { ViewPort } from '@/components/design-system/DSMenu/ds_menu';
+import { UserProps } from '@/types/user';
 
-const Header = () => {
+const Header = (props: UserProps) => {
   const TABLET_VIEW_SIZE = 720;
   const DESKTOP_VIEW_SIZE = 1120;
 
@@ -54,7 +55,7 @@ const Header = () => {
           </div>
           <div className="header-area">
             <p className="username">
-              Usuário
+              { props.name }
             </p>
             <DSIconButton
               source="/svgs/avatar.svg"

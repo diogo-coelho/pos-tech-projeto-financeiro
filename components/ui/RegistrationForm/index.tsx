@@ -67,10 +67,10 @@ const RegistrationForm = () => {
         email: email as string
       });
       if (response.status !== 200) throw response
-      const { message } = await response.json()
+      const { message } = await response.json();
       alert(message);
-
-      router.push('/')
+      goToHomepage();
+      
     } catch (error: unknown) {
       console.log('Ocorreu um erro: ', error);
       const { message } = await (error as unknown as Response).json()
