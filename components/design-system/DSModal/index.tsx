@@ -1,8 +1,11 @@
+import { useRef } from "react";
 import DSIconButton from "../DSIconButton";
 import { ModalProps } from "./ds_modal";
 import './DSModal.scss'
+import useOutsideClick from '@/shared/directives/useOutsideClick';
 
 const DSModal = (props: ModalProps) => {
+  const ref = useRef<HTMLDivElement>(null);
 
   const getClassName = (mainClass: string): string => {
     return [
@@ -11,15 +14,19 @@ const DSModal = (props: ModalProps) => {
     ].toString().replaceAll(",", " ").trim();
   }
 
-  const closeModal = (event: MouseEvent): void => {
+  const closeModal = (event?: MouseEvent): void => {
     props.setActive(false)
     setTimeout(() => props.handleOnClose?.({ event }), 300);
   }
 
+  const handleClickOutside = () => closeModal();
+
+  useOutsideClick({ ref, handler: handleClickOutside });
+
   return (
     <>
       <div className="modal">
-        <div className={getClassName('modal-container')}>
+        <div className={getClassName('modal-container')} ref={ref}>
           { props.children }
           <div className="close-button">
             <DSIconButton

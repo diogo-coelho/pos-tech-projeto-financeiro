@@ -7,7 +7,7 @@ import useOutsideClick from '@/shared/directives/useOutsideClick';
 const DSSelect = (props: SelectProps) => {
   const [active, setActive] = useState<boolean>(false);
   const [currentValue, setCurrentValue] = useState<string>("");
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null);
 
   const className = (mainClass: string): string => {
     return [

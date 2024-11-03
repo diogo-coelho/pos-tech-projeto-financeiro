@@ -139,8 +139,14 @@ const RegistrationForm = () => {
                 ></DSInput>
               </div>
 
-              <div className="checkbox">
-                <input type="checkbox" checked={isChecked} onChange={handleIsChecked}/>
+              <div className="checkbox"> 
+                <div>
+                  <input type="checkbox" checked={isChecked} onChange={handleIsChecked}/>               
+                  <span className="checkmark">
+                    <div className="checkmark_stem"></div>
+                    <div className="checkmark_kick"></div>
+                  </span>
+                </div>
                 <span>Li e estou ciente quanto às condições de tratamento dos meus dados conforme descrito na Política de Privacidade do banco.</span>
               </div>
 

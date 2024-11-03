@@ -2,7 +2,7 @@ import React, { RefObject } from 'react';
 
 export interface OutsideClickProps {
   ref: RefObject<HTMLElement | null>,
-  handler: (event?: MouseEvent | TouchEvent) => void
+  handler: (event?: Event) => void
 }
 
 const useOutsideClick = (props: OutsideClickProps) => {
