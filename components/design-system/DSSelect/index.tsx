@@ -17,7 +17,10 @@ const DSSelect = (props: SelectProps) => {
   }
 
   const toggleActive = (active: boolean): void => setActive(active)
-  const handleOnClick = (option: string): void => setCurrentValue(option);
+  const handleOnClick = (option: string, event: React.MouseEvent<HTMLLIElement>): void => {
+    setCurrentValue(option);
+    props.handleOnSelect?.({ args: option, event })
+  }
   const handleClickOutside = () => setActive(false)
 
   useOutsideClick({ ref, handler: handleClickOutside });
@@ -40,7 +43,9 @@ const DSSelect = (props: SelectProps) => {
           placeholder={ props.placeholder }
           suffix="/arrow_drop_down.png"
           active={active.toString()}
+          error={props.error}
           current-value={currentValue}
+          handleOnClick={(event) => props.handleOnSelectClick?.({ event })}
           readOnly
         />
         <div 
@@ -52,7 +57,7 @@ const DSSelect = (props: SelectProps) => {
             { props.options.map((option, index) => (
               <li 
                 key={index}
-                onClick={() => handleOnClick(option)}
+                onClick={(event) => handleOnClick(option, event)}
                 className={option === currentValue ? 'selected' : ''}
               >{option}</li>
             ))}

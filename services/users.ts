@@ -1,10 +1,13 @@
-import { AuthorizeFormData, UserFormData } from "@/components/ui/RegistrationForm/registration-form"
+import { 
+  AuthorizeFormData, 
+  UserFormData 
+} from "@/components/ui/RegistrationForm/registration-form"
 
 const createUser = async (userFormData: UserFormData): Promise<Response> => {
   const response = await fetch('/api/users', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(userFormData)
   })
@@ -15,7 +18,7 @@ const authorizeUser = async (authorizeFormData: AuthorizeFormData): Promise<Resp
   const response = await fetch('/api/login', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(authorizeFormData)
   })

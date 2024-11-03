@@ -99,6 +99,10 @@
       & .credit-card {
         display: none;
       }
+
+      & form {
+        z-index: 1;
+      }
     }
   }
 }

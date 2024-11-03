@@ -8,7 +8,11 @@ import { accountInformation } from "@/services/account";
 
 export default async function Dashboard() {
   const response = await accountInformation();
-  const { account, user } = await response.json();
+  const { account, user, token } = await response.json();
+
+  console.log('token', token)
+  console.log('user', user)
+  console.log('account', account)
 
   return (
     <>
@@ -23,7 +27,9 @@ export default async function Dashboard() {
             userName={user.name} 
             accountCurrentValue={account.currentValue}
           ></Balance>
-          <Transaction></Transaction>
+          <Transaction
+            userId={account.userId}
+          ></Transaction>
         </div>
         <Statement
           statementList={account.statement}

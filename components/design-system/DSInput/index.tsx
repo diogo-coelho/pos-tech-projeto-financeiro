@@ -26,7 +26,9 @@ const Input = (props: InputProps) => {
           onClick={ (event) => props.handleOnClick?.(event)}
         />
         { props.suffix && 
-          <div className={`suffix${props.active === 'true' ? ` active` : ''}`}>
+          <div className={`suffix${props.active === 'true' ? ` active` : ''}`}
+            onClick={ (event) => props.handleOnClick?.(event)}
+          >
             <Image src={`/images${ props.suffix }`} alt="Icon" width={10} height={6} />
           </div>
         }

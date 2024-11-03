@@ -14,8 +14,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Credenciais inválidas' }, { status: 401 })
   }
 
-  const token = jwt.sign({ id: user?._id, name: user?.name, email: user?.email }, jwtSecret, { expiresIn: '1h'});
-  const response = NextResponse.json({ message: 'Login autenticado', token }, { status: 200 }) 
-  response.cookies.set('token', token, { path: '/', httpOnly: true })
+  const token = jwt.sign({ id: user?._id?.toString(), name: user?.name, email: user?.email }, jwtSecret, { expiresIn: '1h'});
+  const response = NextResponse.json({ message: 'Login autenticado', token }, { status: 200 }); 
+  response.cookies.set('token', token, { path: '/', httpOnly: true });
   return response
 }
