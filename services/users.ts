@@ -6,6 +6,7 @@ import {
 const createUser = async (userFormData: UserFormData): Promise<Response> => {
   const response = await fetch('/api/users', {
     method: 'POST',
+    cache: 'no-store',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -17,6 +18,7 @@ const createUser = async (userFormData: UserFormData): Promise<Response> => {
 const authorizeUser = async (authorizeFormData: AuthorizeFormData): Promise<Response> => {
   const response = await fetch('/api/login', {
     method: 'POST',
+    cache: 'no-store',
     headers: {
       'Content-Type': 'application/json',
     },

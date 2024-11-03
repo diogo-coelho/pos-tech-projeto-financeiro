@@ -55,12 +55,11 @@
   .statement {
     &-container {
       margin: 0;
-      width: 282px;
+      min-width: 282px;
       margin: var(--bb-spacing-large) 0;
 
       .internal-wrapper {
         width: 100%;
-        min-width: 282px;
       }
     }
   }

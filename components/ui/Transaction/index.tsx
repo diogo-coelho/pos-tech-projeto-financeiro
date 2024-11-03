@@ -14,9 +14,11 @@ import { Size } from '@/components/design-system/DSButton/ds_button';
 import { isEmpty } from '@/shared/utils/StringUtils';
 import { TransactionProps } from './transaction';
 import { transferAmount } from '@/services/account';
+import { useRouter } from 'next/navigation';
 
 const Transaction = (props: TransactionProps) => {
   const TABLET_VIEW_SIZE = 720;
+  const router = useRouter();
 
   const [screenWidth, setScreenWidth] = useState<number>(0);
   const [inputValue, setInputValue] = useState<string | undefined>(undefined);
@@ -74,15 +76,16 @@ const Transaction = (props: TransactionProps) => {
   const handleOnSubmit = async (event: Event) => {
     event.preventDefault();
     if (!isValidFields()) return;
-    console.log('props.userId', props.userId)
-    const response = await transferAmount({
-      userId: props.userId, 
+    
+    const response = await transferAmount(props.userId, {
       type: selectValue as string, 
       amount: eval(inputValue as string)
     });
     if (response.status !== 200) throw response
     const { message } = await response.json();
-    console.log('message', message);
+    console.log('message: ', message);
+
+    setTimeout(() => router.push('/dashboard'), 500);    
   }
 
   return (

@@ -19,7 +19,10 @@ const DSList = (props: ListProps) => {
                 <p className={getClassName(item.value)}>{ formatNumberToMonetaryValueString(item.value) }</p>
               </div>  
               <div>
-                <p>{ formatDateToStringDate(item.date) }</p>
+                <p>{ item.date instanceof Date 
+                      ? formatDateToStringDate(item.date) 
+                      : formatDateToStringDate(new Date(item.date)) }
+                </p>
               </div>
             </li>
           ))

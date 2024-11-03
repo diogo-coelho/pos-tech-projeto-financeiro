@@ -1,5 +1,4 @@
 export interface TransactionFormData {
-  userId: string,
   type: string,
   amount: number
 }
