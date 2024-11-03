@@ -1,3 +1,5 @@
+"use client";
+
 import { ContainerProps } from './container';
 import './Container.scss';
 
