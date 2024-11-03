@@ -1,9 +1,10 @@
 "use client";
 import DSMenu from "@/components/design-system/DSMenu";
-import { ViewPort } from "@/components/design-system/DSMenu/ds_menu";
 import React, { useState } from "react";
+import { usePathname } from 'next/navigation';
 
 const SideMenu = () => {
+  const pathname = usePathname();
   const DESKTOP_VIEW_SIZE = 1120;
   const [screenWidth, setScreenWidth] = useState<number>(0);
   const [isHidden, setIsHidden] = useState<boolean>(true);
@@ -28,13 +29,12 @@ const SideMenu = () => {
     <>
       <aside className="side-menu">
         <DSMenu
-          active={true}
           viewport="desktop-view"
           menuItems={[
-            { label: "Início", href:"/" },
-            { label: "Transferências", href:"/transferencias" },
-            { label: "Investimentos", href:"/investimentos" },
-            { label: "Outros serviços", href:"/outros-servicos" }
+            { label: "Início", href:"/dashboard", active: pathname === '/dashboard' ? 'on' : 'off' },
+            { label: "Transferências", href:"/transferencias", active: pathname === '/transferencias' ? 'on' : 'off' },
+            { label: "Investimentos", href:"/investimentos", active: pathname === '/investimentos' ? 'on' : 'off' },
+            { label: "Outros serviços", href:"/outros-servicos", active: pathname === '/outros-servicos' ? 'on' : 'off' }
           ]} 
           hidden={isHidden}
         ></DSMenu>

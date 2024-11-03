@@ -11,7 +11,6 @@ const DSMenu = (props: MenuProps) => {
   const getClassName = (mainClass: string): string => {
     return [
       mainClass,
-      props.active ? `active` : ``,
       props.viewport ?? '',
       props.hidden ? 'hidden' : '',
     ].toString().replaceAll(",", " ").trim();
@@ -36,6 +35,7 @@ const DSMenu = (props: MenuProps) => {
                   key={index}
                   href={item.href}
                   noBorders={isTabletViewport()}
+                  active={item.active}
                   {...props}
                 >  
                 { item.label }              

@@ -18,6 +18,6 @@ const accountSchema = new Schema<Account>({
   statement: { type: Schema.Types.Mixed }
 })
 
-const AccountModel = mongoose.models.User || mongoose.model<Account>('Accounts', accountSchema);
+const AccountModel = mongoose.models.Account || mongoose.model<Account>('Accounts', accountSchema);
 
 export default AccountModel;

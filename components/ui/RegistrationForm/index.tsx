@@ -68,7 +68,6 @@ const RegistrationForm = () => {
       });
       if (response.status !== 200) throw response
       const { message } = await response.json();
-      goToHomepage();
       alert(message);
       
     } catch (error: unknown) {

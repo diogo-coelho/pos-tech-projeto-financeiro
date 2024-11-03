@@ -7,6 +7,7 @@ const DSMenuLink = (props: MenuLinkProps) => {
     return [
       `menu-link-container`, 
       props.noBorders ? `no-borders` : ``,
+      props.active === 'on' ? `active` : ``,
     ].toString().replaceAll(",", " ").trim();
   }
 

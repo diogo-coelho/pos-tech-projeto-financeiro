@@ -11,7 +11,8 @@
     width: 100%;
     max-width: 150px;
 
-    &:hover {
+    &:hover,
+    &.active {
       font-weight: var(--bb-font-weight-bold);
       border-bottom: 1px solid var(--bb-color-light-green-alpha);
 

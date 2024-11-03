@@ -12,7 +12,6 @@ import { formatNumberToMonetaryValueString } from '@/shared/utils/StringUtils';
 const Balance = (props: BalanceProps) => {
   const getTodaysDateFormatted = (): string => {
     const date = new Date();
-    console.log('date in Balance', date)
     return `${getNameOfDayOfTheWeek(date.getDay())}, ${formatDateToFullStringDate(date)}`
   }
 

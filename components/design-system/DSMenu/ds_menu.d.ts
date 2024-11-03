@@ -1,6 +1,7 @@
 export interface MenuItem {
   href: string,
-  label: string
+  label: string,
+  active?: 'on' | 'off',
 }
 
 type ViewPort = 
@@ -10,7 +11,6 @@ type ViewPort =
 
 export interface MenuProps {
   menuItems?: MenuItem[],
-  active?: boolean,
   viewport?: ViewPort,
   hidden?: boolean,
   handleOnClose?: (
