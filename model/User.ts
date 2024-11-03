@@ -12,6 +12,10 @@ const userSchema = new Schema<User>({
   password: { type: String, required: true }
 })
 
-const UserModel = mongoose.models.User || mongoose.model<User>('Users', userSchema);
+if (mongoose.models.Users) {
+  delete mongoose.models.Users;
+}
+
+const UserModel = mongoose.model<User>('Users', userSchema);
 
 export default UserModel;

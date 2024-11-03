@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aplicação de Gerenciamento Financeiro
 
-## Getting Started
+O presente projeto foi desenvolvido como atividade discente relacionada à avaliação da Fase 1 do curso da Pós-Tech de Fronteend Engineering, da FIAP/Alura. O objetivo desse projeto é construir uma interface de uma aplicação de gerenciamento financeiro utilizando como tecnologias obrigatórias Next.js e Design System.
 
-First, run the development server:
+## Tecnologias utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+As seguintes tecnologias e suas respectivas versões foram utilizadas para o desenvolvimento deste projeto:
+
+Para renderização das páginas frontend:
+* [Next.js](https://nextjs.org/docs): Versão 15.0.2;
+* [React e React DOM](https://react.dev/learn): versão 18.17.0;
+
+Para comunicação com banco de dados MongoDB: 
+* [Mongoose](https://mongoosejs.com/docs/): versão 8.7.3;
+
+Para criação e verificação de token com informações de usuário:
+* [JSON Web Token](https://github.com/auth0/node-jsonwebtoken#readme): versão 9.0.2;
+
+As próximas tecnologias de suporte também são utilizadas:
+* [Typescript](https://www.typescriptlang.org/docs/): versão 5;
+* [Sass](https://sass-lang.com/documentation/): versão 1.79.5;
+* [Storybook](https://storybook.js.org/docs): versão 8.3.5;
+
+## Rodando o projeto
+
+Para rodar o projeto localmente:
+
+Para baixar as dependências:
+``` bash
+npm install
+# ou
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para rodar de forma local:
+```bash
+npm run dev
+# ou
+yarn dev
+```
+Abra o endereço [http://localhost:3000](http://localhost:3000) com o navegador de internet. Nesse endereço a tela inicial deve estar renderizada.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

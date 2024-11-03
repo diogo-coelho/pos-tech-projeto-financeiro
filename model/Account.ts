@@ -16,8 +16,12 @@ const accountSchema = new Schema<Account>({
   userId: { type: String, required: true },
   currentValue: { type: Number, required: true },
   statement: { type: Schema.Types.Mixed }
-})
+});
 
-const AccountModel = mongoose.models.Account || mongoose.model<Account>('Accounts', accountSchema);
+if (mongoose.models.Accounts) {
+  delete mongoose.models.Accounts;
+}
+
+const AccountModel = mongoose.model<Account>('Accounts', accountSchema);
 
 export default AccountModel;
