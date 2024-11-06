@@ -1,6 +1,6 @@
 # Aplicação de Gerenciamento Financeiro
 
-O presente projeto foi desenvolvido como atividade discente relacionada à avaliação da Fase 1 do curso da Pós-Tech de Fronteend Engineering, da FIAP/Alura. O objetivo desse projeto é construir uma interface de uma aplicação de gerenciamento financeiro utilizando como tecnologias obrigatórias Next.js e Design System.
+O presente projeto foi desenvolvido como atividade discente relacionada à avaliação da Fase 1 do curso da Pós-Tech de Front-end Engineering, da FIAP/Alura. O objetivo desse projeto é construir uma interface de uma aplicação de gerenciamento financeiro utilizando como tecnologias obrigatórias Next.js e Design System.
 
 ## Tecnologias utilizadas
 
